@@ -8,18 +8,18 @@ const PORT = 5001;
 
 // Middleware
 app.use(cors());
-app.use(express.json()); // To parse JSON requests
+app.use(express.json()); 
 
-// Nodemailer Transporter
+// nodemailer 
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: process.env.EMAIL,
-    pass: process.env.PASS, // Use an App Password if needed
+    pass: process.env.PASS, 
   },
 });
 
-// API Route to Send Email
+
 app.post("/", async (req, res) => {
   console.log("Received request:", req.body);
 
@@ -31,7 +31,7 @@ app.post("/", async (req, res) => {
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: "enkhbadralasralt063@gmail.com", // Change this to your email
+    to: "enkhbadralasralt063@gmail.com", 
     subject: `New Contact Form Submission from ${name}`,
     text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
   };

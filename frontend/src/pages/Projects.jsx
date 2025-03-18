@@ -1,28 +1,27 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// Sample project data
 const projects = [
   {
     id: 1,
     title: "MockChatApp",
     description: "An interactive portfolio built with Three.js & React.",
-    image: "./assets/chatapp.png",
+    image: '/chat.png',
     link: "https://chatapp-vcu9.onrender.com/",
   },
   {
     id: 2,
     title: "E-Commerce App",
     description: "A full-stack MERN e-commerce application.",
-    image: "/images/project2.jpg",
-    link: "https://yourecommerce.com",
+    image: "",
+    link: "",
   },
   {
     id: 3,
     title: "AI Chatbot",
     description: "A chatbot powered by OpenAI API and Node.js.",
-    image: "/images/project3.jpg",
-    link: "https://yourchatbot.com",
+    image: "",
+    link: "",
   },
 ];
 

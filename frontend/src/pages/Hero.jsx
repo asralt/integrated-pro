@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Float, TorusKnot } from "@react-three/drei";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import Social from "../components/social";
 
 // Animation Variants
 const fadeIn = {
@@ -15,7 +16,6 @@ const Hero = () => {
   return (
     <div className=" relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 to-black text-white p-6 overflow-hidden">
       
-      {/* Floating 3D Shape Background */}
       <Canvas className="absolute top-0 left-0 w-full h-full">
         <ambientLight intensity={1} />
         <Float speed={2} rotationIntensity={1} floatIntensity={1.5}>
@@ -26,7 +26,6 @@ const Hero = () => {
         <OrbitControls enableZoom={false} />
       </Canvas>
 
-      {/* Hero Content */}
       <motion.div
         initial="hidden"
         animate="visible"
@@ -40,7 +39,6 @@ const Hero = () => {
           A <span className="text-cyan-400">Full-Stack Developer</span> creating unique web experiences using <span className="text-cyan-400">React</span> & <span className="text-cyan-400">Three.js</span>.
         </p>
 
-        {/* Call-to-Action Buttons */}
         <div className="mt-6 flex justify-center space-x-6">
           <motion.a
             href="/projects"
@@ -60,19 +58,6 @@ const Hero = () => {
           </motion.a>
         </div>
       </motion.div>
-
-      {/* Social Media Icons */}
-      <div className="absolute bottom-8 flex space-x-6">
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-          <FaGithub className="text-gray-300 text-4xl hover:text-white transition" />
-        </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin className="text-blue-400 text-4xl hover:text-blue-500 transition" />
-        </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-          <FaInstagram className="text-pink-400 text-4xl hover:text-pink-500 transition" />
-        </a>
-      </div>
     </div>
   );
 };

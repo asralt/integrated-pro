@@ -3,6 +3,7 @@ import Contact from './pages/Contact'
 import Hero from './pages/Hero'
 import Projects from './pages/Projects'
 import Navbar from './components/Navbar'
+import Social from './components/social'
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -19,7 +20,11 @@ const App = () => {
             <Route path="/contact" element={<Contact/>}/>
             </Routes>
         </div>
-     </Router>      
+     </Router>
+      <div className="flex justify-center items-center w-full mt-6">
+        <Social />
+      </div>
+
     </div>
   )
 }
