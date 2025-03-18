@@ -90,7 +90,7 @@ const Contact = () => {
       {success && <p className="mt-4 text-green-400">{success}</p>}
 
       {/* Social Media Icons */}
-      <div className="absolute bottom-8 flex space-x-6">
+      {/* <div className="absolute bottom-8 flex space-x-6">
         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
           <FaInstagram className="text-pink-500 text-4xl hover:scale-110 transition" />
         </a>
@@ -103,7 +103,7 @@ const Contact = () => {
         <a href="mailto:your.email@gmail.com">
           <FaEnvelope className="text-red-500 text-4xl hover:scale-110 transition" />
         </a>
-      </div>
+      </div> */}
     </motion.div>
   );
 };

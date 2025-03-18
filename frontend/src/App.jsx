@@ -21,7 +21,7 @@ const App = () => {
             </Routes>
         </div>
      </Router>
-      <div className="flex justify-center items-center w-full mt-6">
+      <div className="flex  items-center w-full mt-0.5 justify-start pl-[45%]">
         <Social />
       </div>
 
