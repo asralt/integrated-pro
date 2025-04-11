@@ -6,11 +6,9 @@ const nodemailer = require("nodemailer");
 const app = express();
 const PORT = 5001;
 
-// Middleware
 app.use(cors());
 app.use(express.json()); 
 
-// nodemailer 
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
