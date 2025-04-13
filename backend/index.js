@@ -1,41 +1,32 @@
 require("dotenv").config();
 const express = require("express");
-const cors = require("cors"); 
+const cors = require("cors");
 const path = require("path");
-
 const nodemailer = require("nodemailer");
 
 const app = express();
 const PORT = 5001;
+
 app.use(
   cors({
-    origin: ["http://localhost:5173","https://integrated-pro.onrender.com"],
+    origin: ["http://localhost:5173", "https://integrated-pro.onrender.com"],
     credentials: true,
   })
 );
 
-app.use(cors());
-app.use(express.json()); 
+app.use(express.json());
 
+// Nodemailer transporter
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: process.env.EMAIL,
-    pass: process.env.PASS, 
+    pass: process.env.PASS,
   },
 });
 
-app.use(express.static(path.join(__dirname, "../frontend/dist")));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
-});
-
-
-
+// ✅ POST route FIRST
 app.post("/", async (req, res) => {
-  console.log("Received request:", req.body);
-
   const { name, email, message } = req.body;
 
   if (!name || !email || !message) {
@@ -43,8 +34,8 @@ app.post("/", async (req, res) => {
   }
 
   const mailOptions = {
-    from: process.env.EMAIL_USER,
-    to: "enkhbadralasralt063@gmail.com", 
+    from: process.env.EMAIL,
+    to: "enkhbadralasralt063@gmail.com",
     subject: `New Contact Form Submission from ${name}`,
     text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
   };
@@ -59,7 +50,14 @@ app.post("/", async (req, res) => {
   }
 });
 
-// Start Server
+// ✅ Serve frontend AFTER
+app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
+});
+
+// Start server
 app.listen(PORT, () => {
   console.log(`🚀 Server is running on port ${PORT}...`);
 });
