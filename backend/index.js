@@ -5,6 +5,12 @@ const nodemailer = require("nodemailer");
 
 const app = express();
 const PORT = 5001;
+app.use(
+  cors({
+    origin: ["http://localhost:5173","https://integrated-pro.onrender.com"],
+    credentials: true,
+  })
+);
 
 app.use(cors());
 app.use(express.json()); 
