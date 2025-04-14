@@ -50,7 +50,7 @@ app.post("/", async (req, res) => {
   }
 });
 
-// ✅ Serve frontend AFTER
+// ✅ Serve frontend AFTER  
 app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
 app.get("*", (req, res) => {
