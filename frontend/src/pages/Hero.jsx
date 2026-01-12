@@ -1,10 +1,9 @@
 
 import React from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Float, TorusKnot } from "@react-three/drei";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import Social from "../components/social";
 
 // Animation Variants
 const fadeIn = {
