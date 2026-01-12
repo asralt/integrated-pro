@@ -30,7 +30,7 @@ const Contact = () => {
   };
 
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -104,7 +104,7 @@ const Contact = () => {
           <FaEnvelope className="text-red-500 text-4xl hover:scale-110 transition" />
         </a>
       </div> */}
-    </motion.div>
+    </div>
   );
 };
 

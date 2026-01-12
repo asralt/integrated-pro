@@ -33,7 +33,7 @@ const fadeIn = {
 
 const ProjectCard = ({ project }) => {
   return (
-    <motion.div
+    <div
       whileHover={{ scale: 1.05, rotateY: 5 }}
       transition={{ duration: 0.3 }}
       className="relative bg-gray-800 p-5 rounded-xl shadow-lg hover:shadow-cyan-500/50 transition overflow-hidden group"
@@ -55,13 +55,13 @@ const ProjectCard = ({ project }) => {
           View Project
         </a>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
 const Projects = () => {
   return (
-    <motion.div
+    <div
       initial="hidden"
       animate="visible"
       variants={fadeIn}
@@ -77,7 +77,7 @@ const Projects = () => {
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 };
 
