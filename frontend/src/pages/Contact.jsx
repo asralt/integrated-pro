@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { FaInstagram, FaFacebook, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import axios from "axios";
 
