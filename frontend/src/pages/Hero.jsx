@@ -4,6 +4,7 @@ import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Float, TorusKnot } from "@react-three/drei";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import {Link} from "react-router-dom";
 
 // Animation Variants
 const fadeIn = {
@@ -47,14 +48,20 @@ const Hero = () => {
           >
             View Projects
           </a>
-          <a
+          {/* <a
             href="/contact"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className="px-6 py-3 border border-cyan-500 text-cyan-400 rounded-lg shadow-lg hover:bg-cyan-500 hover:text-white transition"
           >
             Contact Me
-          </a>
+          </a> */}
+            <Link
+            to="/contact"
+            className="px-6 py-3 border border-cyan-500 text-cyan-400 rounded-lg shadow-lg hover:bg-cyan-500 hover:text-white transition"
+            >
+              Contact me
+            </Link>
         </div>
       </div>
     </div>
