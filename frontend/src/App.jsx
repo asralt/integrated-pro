@@ -25,9 +25,10 @@ const App = () => {
             </Routes>
         </div>
      </Router>
-      <div className="flex  items-center w-full mt-0.5 justify-start pl-[45%]">
-        <Social />
+      <div className="flex justify-center items-center mt-4 space-x-6">
+          <Social />
       </div>
+
 
     </div>
   )
