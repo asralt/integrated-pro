@@ -4,7 +4,6 @@ import Hero from './pages/Hero'
 import Projects from './pages/Projects'
 import Navbar from './components/Navbar'
 import Social from './components/Social'
-import NotFound from './404/NotFound'
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -25,10 +24,9 @@ const App = () => {
             </Routes>
         </div>
      </Router>
-      <div className="flex justify-center items-center mt-4 space-x-6">
-          <Social />
+      <div className="flex  items-center w-full mt-0.5 justify-start ">
+        <Social />
       </div>
-
 
     </div>
   )
