@@ -4,6 +4,7 @@ import Hero from './pages/Hero'
 import Projects from './pages/Projects'
 import Navbar from './components/Navbar'
 import Social from './components/Social'
+import NotFound from './404/NotFound'
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
